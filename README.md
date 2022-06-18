@@ -1,4 +1,11 @@
+<center>
+
 # Fun and clear error-messages
+
+<img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/eriksturesson/errorDrawings/master">
+
+<img alt="npm" src="https://img.shields.io/npm/dy/@eriksturesson/myfirstnpmpackage?label=npm%20downloads">
+</center>
 
 ```
 npm install errorDrawings
