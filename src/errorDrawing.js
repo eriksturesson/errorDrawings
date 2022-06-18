@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.errorDrawing = void 0;
 var terminalColours_1 = require("../utils/terminalColours");
 function drawImpaled(error) {
     var errorCode = error.code || error.status ? error.code || error.status : "xxx";
@@ -42,4 +41,4 @@ function drawImpaled(error) {
 function errorDrawing(error) {
     drawImpaled(error);
 }
-exports.errorDrawing = errorDrawing;
+exports.default = errorDrawing;

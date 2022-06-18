@@ -39,6 +39,6 @@ function drawImpaled(error: any) {
 	return "error done";
 }
 
-export function errorDrawing(error: any) {
+export default function errorDrawing(error: any) {
 	drawImpaled(error);
 }
