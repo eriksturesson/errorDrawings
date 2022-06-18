@@ -22,13 +22,12 @@ npm run test
 Use the error object "e" as parameter in "errorDrawing(e)"
 
 ```
-import {errorDrawing} from "errorDrawing"
+import errorDrawing from "./node_modules/error-drawings/src/errorDrawing";
 
 
 async function myExample(){
 try{
-    myNotSoAwesomeCode()
-    return "yay"
+    myfunctionThatWillReturnError()
 } catch(e){
     errorDrawing(e)
     }
