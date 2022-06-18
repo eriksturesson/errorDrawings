@@ -8,7 +8,7 @@
 </center>
 
 ```
-npm install errorDrawings
+npm install error-drawings
 ```
 
 Get <i><u>a picture</u></i> of what the script does:
