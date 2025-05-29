@@ -1,7 +1,12 @@
-import errorDrawing from "..";
+import drawLog, { drawInfo, drawWarning } from "..";
 
 //Custom Error interface
-errorDrawing({ code: 500, message: "Custom test arg error" });
+drawLog({ code: 500, message: "Custom test arg error", severity: "info" });
 
 // A normal error
-errorDrawing(new Error("This is a 'new Error'-error"));
+drawLog(new Error("This is a 'new Error'-error"));
+
+// A custom error with severity
+drawInfo(new Error("This is a 'new Error'-error with severity"));
+
+drawWarning(new Error("This is a 'new Error'-error with severity warning"));
