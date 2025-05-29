@@ -25,11 +25,12 @@ Use the error object "e" as parameter in "errorDrawing(e)"
 import errorDrawing from 'error-drawings';
 
 async function myExample(){
-try{
-    myfunctionThatWillReturnError()
-} catch(e){
-    errorDrawing(e)
-    }
+try {
+  // code that may throw an error
+} catch (err) {
+  errorDrawing(err);
+  throw err;  // re-throw if you want the error to bubble up further
+}
 }
 
 ```

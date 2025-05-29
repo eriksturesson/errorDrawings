@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.2] - 2025-05-29
+
+### Changed
+
+- Moved drawing functions into a new `drawings/` folder for better structure and clarity.
+- Updated main error drawing function to import from `drawings/`.
+- Cleaned up exports and typings.
+- Added `.gitignore` entry for `dist/` folder to avoid committing compiled output.
+- Added `/dist` to `.gitignore` and removed `dist` folder from version control.
+
+## [2.0.1] - 2025-05-29
+
+### Changed
+
+- Updating engines
+- updating exports filepath
+
 ## [2.0.0] - 2025-05-29
 
 ### Changed
