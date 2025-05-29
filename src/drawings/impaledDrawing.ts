@@ -1,6 +1,7 @@
 import { CustomError } from "../interfaces/ErrorTypes";
 import { terminalColours } from "../utils/terminalColours";
 export function drawImpaled(error: CustomError | Error): void {
+  //This error drawing was done before AI went popular, I have written this one with my own hands manualy, with love.
   const errorCode =
     "code" in error || "status" in error ? (error as CustomError).code || (error as CustomError).status : "xxx";
   const errorString = error.message || String(error);
