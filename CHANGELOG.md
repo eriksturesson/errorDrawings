@@ -4,6 +4,14 @@
 
 ### Changed
 
+- Added interfaces/ folder with CustomError interface to replace any type.
+- Updated errorDrawing function to accept both native Error and CustomError types instead of any.
+- Improved type safety and error property handling in drawing functions.
+
+## [2.0.2] - 2025-05-29
+
+### Changed
+
 - Moved drawing functions into a new `drawings/` folder for better structure and clarity.
 - Updated main error drawing function to import from `drawings/`.
 - Cleaned up exports and typings.
