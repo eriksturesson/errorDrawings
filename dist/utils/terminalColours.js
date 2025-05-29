@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.terminalColours = void 0;
+exports.terminalColours = terminalColours;
 function terminalColours() {
     return {
         Reset: "\x1b[0m",
@@ -28,4 +28,3 @@ function terminalColours() {
         BgWhite: "\x1b[47m",
     };
 }
-exports.terminalColours = terminalColours;

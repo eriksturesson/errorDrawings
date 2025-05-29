@@ -22,8 +22,7 @@ npm run test
 Use the error object "e" as parameter in "errorDrawing(e)"
 
 ```
-import errorDrawing from "./node_modules/error-drawings/src/errorDrawing";
-
+import errorDrawing from 'error-drawings';
 
 async function myExample(){
 try{

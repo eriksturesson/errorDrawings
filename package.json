@@ -1,42 +1,50 @@
 {
-	"name": "error-drawings",
-	"license": "MIT",
-	"maintainers": [],
-	"author": {
-		"name": "Erik Sturesson",
-		"email": "hej@eriksturesson.se",
-		"url": "https://eriksturesson.se"
-	},
-	"version": "1.0.5",
-	"description": "Summarized error messages displayed with fun drawings",
-	"keywords": [
-		"error",
-		"fail",
-		"drawing",
-		"drawings",
-		"summarized",
-		"help",
-		"fun"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/eriksturesson/errorDrawings"
-	},
-	"bugs": {
-		"email": "hej@eriksturesson.se",
-		"url": "https://github.com/eriksturesson/errorDrawings/issues"
-	},
-	"engines": {
-		"npm": "^8.0.0",
-		"node": "^14.0.0"
-	},
-	"scripts": {
-		"test": "node test.js"
-	},
-	"dependencies": {
-		"typescript": "^4.7.4"
-	},
-	"exports": {
-		".": "./src/errorDrawing.js"
-	}
+  "name": "error-drawings",
+  "license": "MIT",
+  "maintainers": [
+    "Erik Sturesson"
+  ],
+  "author": {
+    "name": "Erik Sturesson",
+    "email": "hej@eriksturesson.se",
+    "url": "https://eriksturesson.se"
+  },
+  "version": "2.0.0",
+  "description": "Summarized error messages displayed with fun drawings",
+  "keywords": [
+    "error",
+    "fail",
+    "drawing",
+    "drawings",
+    "summarized",
+    "help",
+    "fun"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eriksturesson/errorDrawings"
+  },
+  "bugs": {
+    "email": "hej@eriksturesson.se",
+    "url": "https://github.com/eriksturesson/errorDrawings/issues"
+  },
+  "engines": {
+    "npm": "^8.0.0",
+    "node": "^14.0.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "ts-node src/test/test.ts"
+  },
+  "dependencies": {
+    "typescript": "^4.7.4"
+  },
+  "exports": {
+    ".": "./src/errorDrawing.js"
+  }
 }
