@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.1] - 2025-05-29
+
+### Fixed
+
+- Published missing build files after accidental publish without correct build in version 3.0.0.
+
 ## [3.0.0] - 2025-05-29
 
 ### Breaking Changes
