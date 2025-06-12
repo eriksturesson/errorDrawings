@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.2] - 2025-06-12
+
+### Changed
+
+- Added readme of hint to use `backend-error` together with `error-drawings`
+
 ## [3.0.1] - 2025-05-29
 
 ### Fixed

@@ -113,3 +113,32 @@ export interface CustomError {
   severity?: "info" | "warning" | "error" | "critical";
 }
 ```
+
+## 🎨 Works well with [backend-error](https://www.npmjs.com/package/backend-error)
+
+[![GitHub package.json version (master)](https://img.shields.io/github/package-json/v/eriksturesson/backendError/master)](https://github.com/eriksturesson/backendError)
+[![npm](https://img.shields.io/npm/dy/backend-error?label=npm%20downloads)](https://www.npmjs.com/package/backend-error)
+
+```bash
+npm install backend-error
+```
+
+BackendError is a lightweight utility for structured and user-aware error handling in Node.js backends. It helps distinguish operational errors from unexpected crashes, and supports standardized error responses across services.
+
+```ts
+import { BackendError } from "backend-error";
+import drawLog from "error-drawings";
+
+try {
+  throw BackendError.Forbidden("No access to resource");
+} catch (err) {
+  const isCritical = !(err instanceof BackendError && err.isOperational) || err.code >= 500;
+  if (isCritical) {
+    // 🔥 Draw dramatic error output to highlight critical issues during development
+    // 🧠 Important: log BEFORE formatting, since the formatter may hide details if showUser is false
+    drawLog(err);
+  }
+  const { status, body } = await httpErrorFormatter(err); //Use the formatter as always
+  res.status(status).json(body);
+}
+```

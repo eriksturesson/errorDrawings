@@ -20,7 +20,7 @@ export default function drawLog(error: CustomError | Error): void {
 
   switch (severity) {
     case "info":
-      drawHappy(error);
+      drawInfo(error);
       break;
     case "warning":
       drawWarning(error);
