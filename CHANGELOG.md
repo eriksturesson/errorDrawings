@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3] - 2025-06-17
+
+### Changed
+
+- Improved readme
+- Improved keywords
+
 ## [3.0.2] - 2025-06-12
 
 ### Changed

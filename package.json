@@ -9,9 +9,11 @@
     "email": "hej@eriksturesson.se",
     "url": "https://eriksturesson.se"
   },
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Summarized error messages displayed with fun drawings",
   "keywords": [
+    "error-logging",
+    "error-visualization",
     "error",
     "fail",
     "drawing",

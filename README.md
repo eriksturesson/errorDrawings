@@ -77,7 +77,7 @@ This is recommended if you want to specify the drawing manually because you have
 Use the default export `drawLog`, which reads the severity property and routes to the correct drawing automatically:
 
 ```ts
-import drawLog from "error-drawings";
+import drawLog, { type CustomError } from "error-drawings";
 
 const error: CustomError = {
   message: "This is a warning with severity",
@@ -94,7 +94,7 @@ This is the easiest way if you control or extend your errors with a severity fie
 The package exports the `CustomError` interface for strong typing:
 
 ```ts
-import type { CustomError } from "error-drawings";
+import drawLog, { type CustomError } from "error-drawings";
 
 const error: CustomError = {
   code: 123,
@@ -116,14 +116,15 @@ export interface CustomError {
 
 ## 🎨 Works well with [backend-error](https://www.npmjs.com/package/backend-error)
 
-[![GitHub package.json version (master)](https://img.shields.io/github/package-json/v/eriksturesson/backendError/master)](https://github.com/eriksturesson/backendError)
-[![npm](https://img.shields.io/npm/dy/backend-error?label=npm%20downloads)](https://www.npmjs.com/package/backend-error)
+![npm](https://img.shields.io/npm/v/backend-error)
+![downloads](https://img.shields.io/npm/dm/backend-error)
+![license](https://img.shields.io/npm/l/backend-error)
 
 ```bash
 npm install backend-error
 ```
 
-BackendError is a lightweight utility for structured and user-aware error handling in Node.js backends. It helps distinguish operational errors from unexpected crashes, and supports standardized error responses across services.
+`backend-error` is a lightweight Node.js / TypeScript utility that formats all errors—custom or native—into standardized HTTP responses with correct status codes and user-friendly messages. The `httpErrorFormatter` ensures secure, consistent error output by controlling what is exposed to the frontend.
 
 ```ts
 import { BackendError } from "backend-error";
@@ -138,7 +139,7 @@ try {
     // 🧠 Important: log BEFORE formatting, since the formatter may hide details if showUser is false
     drawLog(err);
   }
-  const { status, body } = await httpErrorFormatter(err); //Use the formatter as always
+  const { status, body } = httpErrorFormatter(err); //Use the formatter as always
   res.status(status).json(body);
 }
 ```
